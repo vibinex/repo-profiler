@@ -1,0 +1,6 @@
+name: 'Repository Profiler'
+description: 'Extracts insights from repository code'
+author: 'Alokit-Innovations'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
