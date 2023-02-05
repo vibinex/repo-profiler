@@ -4,3 +4,6 @@ author: 'Alokit-Innovations'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+branding:
+  icon: 'bar-chart-2'
+  color: 'gray-dark'
