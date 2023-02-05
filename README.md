@@ -1,2 +1,7 @@
-# repo-profiler
-Create a metric-based profile of your repository
+# Repository Profiler action
+
+This action analyzes repository for insights
+
+## Example usage
+
+uses: actions/dev-profiler@v0.1
