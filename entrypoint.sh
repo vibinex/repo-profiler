@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
 devprofiler -- docker
-git config --global --add safe.directory $(pwd)
+git config --global --add safe.directory /github/workspace
 timestamp=$(date +%s)
 filename="${timestamp}-devprofile.jsonl.gz"
 mv devprofile.jsonl.gz "${filename}"
