@@ -6,7 +6,10 @@
 Add to your repository:
 
 ```yaml
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   profile:
     runs-on: ubuntu-latest
