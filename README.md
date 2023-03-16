@@ -7,12 +7,14 @@ Add to your repository:
 
 ```yaml
 on:
-  push:
+  repository_dispatch:
+    types: action_trigger
     branches:
-      - main
+        - master
+        - main
 jobs:
   profile:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3
