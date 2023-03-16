@@ -1,5 +1,5 @@
 # Repository Profiler Action
-> An action to create a metric-based profile from your repository metadata 🚀
+> An action to add context to your pull requests by gathering git commit history 🚀
 
 ## Usage
 
