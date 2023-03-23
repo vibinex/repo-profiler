@@ -1,7 +1,7 @@
 #!/bin/sh -l
 echo "$GITHUB_REPOSITORY"
 echo "$GITHUB_REPOSITORY_OWNER"
-SET GITHUB
+printenv
 # git config --global --add safe.directory /github/workspace
 # devprofiler -- docker /github/workspace
 # timestamp=$(date +%s)
