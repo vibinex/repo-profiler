@@ -1,6 +1,6 @@
 #!/bin/sh -l
-echo "$repository.name"
-echo "$repository.owner.name"
+echo "${{ github.repository.name }}"
+echo "${{ github.repository.owner.name }}"
 # git config --global --add safe.directory /github/workspace
 # devprofiler -- docker /github/workspace
 # timestamp=$(date +%s)
