@@ -12,8 +12,3 @@ jobs:
           fetch-depth: 0
       - name: Repository Profiler
         uses: Alokit-Innovations/repo-profiler@tr/issue35
-      - name: Dump github context
-        run: echo "$GITHUB_CONTEXT"
-        shell: bash
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
