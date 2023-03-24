@@ -1,6 +1,6 @@
 #!/bin/sh -l
 git config --global --add safe.directory /github/workspace
-devprofiler -- docker
+devprofiler -- github /github/workspace "${GITHUB_REPOSITORY}"
 timestamp=$(date +%s)
 filename="${timestamp}-devprofile.jsonl.gz"
 mv devprofile.jsonl.gz "${filename}"
