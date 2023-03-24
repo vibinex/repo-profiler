@@ -1,7 +1,6 @@
 on:
-  push:
-    branches:
-      - tr/issue35
+  repository_dispatch:
+    types: repo_profile_execution
 jobs:
   profile:
     runs-on: ubuntu-22.04
@@ -11,4 +10,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: Repository Profiler
-        uses: Alokit-Innovations/repo-profiler@tr/issue35
+        uses: Alokit-Innovations/repo-profiler@v0
