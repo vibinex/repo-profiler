@@ -8,10 +8,7 @@ Add to your repository:
 ```yaml
 on:
   repository_dispatch:
-    types: action_trigger
-    branches:
-        - master
-        - main
+    types: repo_profile_execution
 jobs:
   profile:
     runs-on: ubuntu-22.04
