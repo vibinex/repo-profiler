@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 
 RUN apt update && apt install curl -y
 RUN apt install git -y
-ADD https://github.com/Alokit-Innovations/dev-profiler/releases/download/v0.1.2/devprofiler.deb /tmp
+ADD https://github.com/Alokit-Innovations/dev-profiler/releases/download/v0.2.0/devprofiler.deb /tmp
 RUN apt install /tmp/devprofiler.deb -y
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
