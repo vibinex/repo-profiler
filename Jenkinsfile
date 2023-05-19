@@ -5,7 +5,7 @@ pipeline {
         }
     }
     tools {
-      docker "dockerTool"
+      dockerTool "default-vibinex"
     }
     stages {
         stage('Checkout and run devprofiler') {
