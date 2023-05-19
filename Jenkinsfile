@@ -5,7 +5,7 @@ pipeline {
         }
     }
     tools {
-      docker "docker"
+      docker "dockerTool"
     }
     stages {
         stage('Checkout and run devprofiler') {
