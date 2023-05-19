@@ -5,7 +5,7 @@ pipeline {
         }
     }
     tools {
-      dockerTool "default-vibinex"
+      org.jenkinsci.plugins.docker.commons.tools.DockerTool "default-vibinex"
     }
     stages {
         stage('Checkout and run devprofiler') {
