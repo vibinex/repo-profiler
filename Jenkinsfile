@@ -15,9 +15,7 @@ pipeline {
         stage('Run devprofiler') {
             steps {
                 script {
-                    docker.image('tapish303/repo-profiler-pipe:latest').inside('-e BITBUCKET_CLONE_DIR=${env.BITBUCKET_CLONE_DIR} -e BITBUCKET_REPO_FULL_NAME="repo-profiler"') {c ->
-                        sh './pipe.sh'
-                    }
+                    docker.image('tapish303/repo-profiler-pipe:latest').inside('-e BITBUCKET_CLONE_DIR=${env.BITBUCKET_CLONE_DIR} -e BITBUCKET_REPO_FULL_NAME="repo-profiler"') {}
                 }
             }
         }
