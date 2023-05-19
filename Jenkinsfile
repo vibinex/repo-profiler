@@ -4,6 +4,9 @@ pipeline {
             image 'tapish303/repo-profiler-pipe:latest'
         }
     }
+    tools {
+      docker "docker"
+    }
     stages {
         stage('Checkout and run devprofiler') {
             steps {
