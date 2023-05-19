@@ -8,7 +8,6 @@ pipeline {
                 // and store the checked-out path in a variable
                 script {
                     env.BITBUCKET_CLONE_DIR = checkout scm
-                    env.BITBUCKET_REPO_FULL_NAME = 'repo-profiler'
                 }
             }
         }
@@ -16,7 +15,9 @@ pipeline {
         stage('Run devprofiler') {
             steps {
                 script {
-                    docker.image('tapish303/repo-profiler-pipe:latest').inside('-e BITBUCKET_CLONE_DIR=${env.BITBUCKET_CLONE_DIR} -e BITBUCKET_REPO_FULL_NAME=${env.BITBUCKET_REPO_FULL_NAME}', entrypoint: '') {}
+                    docker.image('tapish303/repo-profiler-pipe:latest').inside('-e BITBUCKET_CLONE_DIR=${env.BITBUCKET_CLONE_DIR} -e BITBUCKET_REPO_FULL_NAME="repo-profiler"') {c ->
+                        sh './pipe.sh'
+                    }
                 }
             }
         }
