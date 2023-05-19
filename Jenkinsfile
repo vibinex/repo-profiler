@@ -7,16 +7,16 @@ pipeline {
                 // Checkout your code from your source control system (e.g., Git)
                 // and store the checked-out path in a variable
                 script {
-                    env.CHECKOUT_PATH = checkout scm
+                    env.BITBUCKET_CLONE_DIR = checkout scm
+                    env.BITBUCKET_REPO_FULL_NAME = 'repo-profiler'
                 }
             }
         }
 
         stage('Run devprofiler') {
             steps {
-                // Run your tool inside a Docker container
-                docker.image('tapish303/repo-profiler-pipe:latest').withRun('-u root --entrypoint /bin/bash') {
-
+                script {
+                    docker.image('tapish303/repo-profiler-pipe:latest').inside('-e BITBUCKET_CLONE_DIR=${env.BITBUCKET_CLONE_DIR} -e BITBUCKET_REPO_FULL_NAME=${env.BITBUCKET_REPO_FULL_NAME}', entrypoint: '') {}
                 }
             }
         }
